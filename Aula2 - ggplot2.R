@@ -11,3 +11,10 @@ ggplot(data = dados, mapping = aes(x = x, y = y)) +
   
 amostras100 <- as.tibble(read.csv2(file = "100_amostras.csv", header = TRUE, dec = "."))
 sexo <- as.tibble(read.csv2("sexo.csv"))
+
+amostras100_tidy <- gather(data = amostras100,
+                           key = Amostra,
+                           value = Valor,
+                           -renda)
+
+df_juntos <- inner_join(amostras100, sexo, by = "renda")
