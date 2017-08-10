@@ -10,6 +10,13 @@ fim <- as.Date("2016-12-01")
 #                      end_date = fim,
 #                      name = "ipca", 
 #                      as = "tibble")
+=======
+ipca16 <- get_series(code = 443,
+                     start_date = inicio,
+                     end_date = fim,
+                     name = "ipca",
+                     as = "tibble")
+>>>>>>> 4dc61fb0782cba6c704949f23bcbd1a804849b43
 nr <- 11
 nc <- 7
 datas <- seq(as.Date("2017-01-01"), length.out = nr, by = "months")
